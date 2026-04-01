@@ -1,0 +1,35 @@
+{
+  "name": "maestrias-online-backend",
+  "version": "1.0.0",
+  "description": "Backend API para maestrías online UEES",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "node --loader ts-node/esm src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "migrate": "node --loader ts-node/esm src/migrations/run.ts",
+    "lint": "tsc --noEmit",
+    "test": "npm run lint"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^7.5.0",
+    "helmet": "^8.1.0",
+    "pg": "^8.11.3",
+    "uuid": "^9.0.1",
+    "validator": "^13.11.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.10.6",
+    "@types/pg": "^8.11.2",
+    "@types/uuid": "^10.0.0",
+    "@types/validator": "^13.15.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
